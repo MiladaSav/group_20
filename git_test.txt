@@ -1,0 +1,64 @@
+1) Посмотреть где я— $pwd
+2) Создать папку—-$mkdir qa_test
+3) Зайти в папку——$cd qa_test
+4) Создать 3 папки—-$mkdir version_1 version_2 version_3
+5) Зайти в любоую папку—-$cd version_2
+6) Создать 5 файлов (3 txt, 2 json)—$touch 1.txt 2.txt 3.txt 21.json 22.json
+7) Создать 3 папки—-$mkdir version_2_2 version_2_3 version_2_4
+8. Вывести список содержимого папки—-$ls -la
+9) + Открыть любой txt файл——$vi 1.txt
+10) + написать туда что-нибудь, любой текст.——i 
+11) + сохранить и выйти.—- ESC :wq!
+12) Выйти из папки на уровень выше——$cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.—-$mv 1.txt 21.json version_2_3
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.—-$cp 1_2.txt 1_2_3.txt version_2_3
+15) Найти файл по имени——$ find -name 1_2.*
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.—-
+$ grep test 1_2.txt
+1) pervaya strochka test
+2) vtoraya strochka testic
+2) tretii strochechka test
+
+$ cat 1_2.txt
+1) pervaya strochka test
+2) vtoraya strochka testic
+2) tretii strochechka test
+4) stroka tesiko
+5) tesiko
+
+17) вывести несколько первых строк из текстового файла---
+$ head -3 1_2.txt
+1) pervaya strochka test
+2) vtoraya strochka testic
+2) tretii strochechka test
+
+18) вывести несколько последних строк из текстового файла---
+$ tail -2 1_2.txt
+4) stroka tesiko
+5) tesiko
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.---$ less 1_2.txt  Выход из режима просмотра q
+20) вывести дату и время---$ date
+Tue Jun 29 19:27:29     2021
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+https://api.quarantine.country/api/v1/regions----$curl https://api.quarantine.country/api/v1/regions 
+*Мног*много букаф*
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13---- 
+
+Сам скрипт:
+#!/bin/bash
+mkdir luna_1 luna_2
+cd luna_1
+touch okno_1.txt okno_2.txt okno_3.txt pol_1.json pol_2.json
+mkdir saturn_1 saturn_2 saturn_3
+ls
+mv okno_1.txt pol_2.json saturn_2
+
+Включить его--$ chmod ugo+x script.txt
+запустить---$ ./script.txt
